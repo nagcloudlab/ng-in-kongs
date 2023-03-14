@@ -12,9 +12,11 @@ export class ProductListComponent {
       id: 1,
       name: 'Laptop',
       price: 100,
+      currencyCode: 'INR',
       description: 'Laptop description',
       isAvailable: true,
-      imgPath: "assets/Laptop.png"
+      imgPath: "assets/Laptop.png",
+      make: Date.now()
     },
     {
       id: 2,
@@ -22,7 +24,8 @@ export class ProductListComponent {
       price: 100,
       description: 'Mobile description',
       isAvailable: true,
-      imgPath: "assets/Mobile.png"
+      imgPath: "assets/Mobile.png",
+      make: Date.now()
     }
   ]
 

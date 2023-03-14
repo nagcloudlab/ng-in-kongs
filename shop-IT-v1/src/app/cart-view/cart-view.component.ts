@@ -25,6 +25,14 @@ export class CartViewComponent {
     // todo any side-effect when component is initialized
   }
 
+  ngAfterContentInit() {
+    console.log("CartViewComponent::ngAfterContentInit");
+  }
+
+  ngAfterViewInit() {
+    console.log("CartViewComponent::ngAfterViewInit");
+  }
+
   ngOnDestroy() {
     console.log("CartViewComponent::ngOnDestroy");
     // todo any side-effect when component is destroyed

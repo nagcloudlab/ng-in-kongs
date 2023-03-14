@@ -1,11 +1,14 @@
-<div *ngIf="product.isAvailable">
+<div *ngIf="product.isAvailable" appHighlight>
+    <pre>
+        {{product|json}}
+    </pre>
     <div class="row">
         <div class="col-4">
             <img class="img-fluid" alt="" [src]="product.imgPath" />
         </div>
         <div class="col-8">
-            <div>{{product.name}}</div>
-            <div>{{product.price}}</div>
+            <div>{{product.name|uppercase}} - <small>{{product.make|date:'yyyy'}}</small></div>
+            <div>{{product.price | discount | currency:product.currencyCode}}</div>
             <button (click)="handleBuy($event)" class="btn btn-sm btn-dark">buy</button>
             <ul class="nav nav-tabs">
                 <li class="nav-item">
@@ -21,7 +24,7 @@
                         (click)="handleTabChange($event,3)">Reviews</a>
                 </li>
             </ul>
-            <div *ngIf="isTabSelected(1)">{{product.description}}</div>
+            <div *ngIf="isTabSelected(1)">{{product.description|slice:0:1000}}</div>
             <div *ngIf="isTabSelected(2)">Not yet</div>
             <div *ngIf="isTabSelected(3)">
                 <app-review *ngFor="let rev of reviews" [value]="rev">
