@@ -1,0 +1,30 @@
+
+1. NG core concepts
+
+    - directives
+        a. component
+            e.g my-component
+        b. structural
+            e.g ngIf
+        c. attribute/property
+            e.g ngClass,ngStyle...
+    - data-bindings
+        a. interpolation
+            {{expression}}
+        b. property
+            <element [prop1]="exp"/>    
+        c. event
+            <element (event-name)="handler($event)"/>
+
+
+
+----------------------------------------
+
+
+Ng project
+
+    - Module(s)
+
+        - directives
+        - pipes
+        - services
