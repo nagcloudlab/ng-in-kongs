@@ -17,6 +17,7 @@
         c. event
             <element (event-name)="handler($event)"/>
 2. NG Component Arch
+3. NG component lifecycle
 
 
 
