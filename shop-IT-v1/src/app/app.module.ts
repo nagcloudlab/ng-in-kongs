@@ -14,6 +14,9 @@ import { HighlightDirective } from './highlight.directive';
 import { DiscountPipe } from './discount.pipe';
 import { HomeComponent } from './home/home.component';
 import { NotForudComponent } from './not-forud/not-forud.component';
+import { CustomerFormComponent } from './customer-form/customer-form.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ReactiveCustomerFormComponent } from './reactive-customer-form/reactive-customer-form.component';
 
 
 const appRoutes: Routes = [
@@ -28,6 +31,10 @@ const appRoutes: Routes = [
   {
     path: "cart",
     component: CartViewComponent
+  },
+  {
+    path: "customer-form",
+    component: ReactiveCustomerFormComponent
   },
   {
     path: '**',
@@ -47,10 +54,14 @@ const appRoutes: Routes = [
     CardComponent,
     HighlightDirective,
     DiscountPipe,
-    HomeComponent
+    HomeComponent,
+    CustomerFormComponent,
+    ReactiveCustomerFormComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],
