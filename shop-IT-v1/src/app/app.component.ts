@@ -8,10 +8,6 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'shop-IT-v1';
   isCartOpen: boolean = false
-  cart: Array<any> = [];
-  addToCart(item: any) {
-    this.cart = this.cart.concat(item);
-  }
   toggleCart() {
     this.isCartOpen = !this.isCartOpen;
   }

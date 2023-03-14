@@ -29,12 +29,5 @@ export class ProductListComponent {
     }
   ]
 
-  @Output() buy = new EventEmitter<any>()
-
-  handleBuy(product: any) {
-    this.buy.emit(product)
-  }
-
-
 
 }

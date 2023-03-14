@@ -1,4 +1,5 @@
 import { Component, Input, SimpleChange } from '@angular/core';
+import { CartService } from '../cart.service';
 
 @Component({
   selector: 'app-cart-view',
@@ -7,9 +8,9 @@ import { Component, Input, SimpleChange } from '@angular/core';
 })
 export class CartViewComponent {
 
-  @Input("value") cart: Array<any> = []
+  cart: Array<any> = []
 
-  constructor() {
+  constructor(private cartService: CartService) {
     console.log("CartViewComponent::constructor");
     // todo any ont-time intialization
   }
@@ -23,6 +24,12 @@ export class CartViewComponent {
   ngOnInit() {
     console.log("CartViewComponent::ngOnInit");
     // todo any side-effect when component is initialized
+    this.cartService.cartStream
+      .subscribe({
+        next: cart => {
+          this.cart = cart;
+        }
+      })
   }
 
   ngAfterContentInit() {

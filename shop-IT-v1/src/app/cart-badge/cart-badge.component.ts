@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { CartService } from '../cart.service';
 
 @Component({
   selector: 'app-cart-badge',
@@ -7,6 +8,15 @@ import { Component, Input } from '@angular/core';
 })
 export class CartBadgeComponent {
 
-  @Input() value = 0
+  value = 0
+
+  constructor(private cartService: CartService) { }
+
+  ngOnInit() {
+    this.cartService.cartStream
+      .subscribe((cart: any) => {
+        this.value = cart.length;
+      });
+  }
 
 }
