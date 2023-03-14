@@ -1,4 +1,5 @@
 
+
 1. NG core concepts
 
     - directives
@@ -15,6 +16,7 @@
             <element [prop1]="exp"/>    
         c. event
             <element (event-name)="handler($event)"/>
+2. NG Component Arch
 
 
 

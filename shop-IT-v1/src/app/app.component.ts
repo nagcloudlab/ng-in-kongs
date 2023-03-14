@@ -7,14 +7,24 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'shop-IT-v1';
-  product: any = {
-    id: 1,
-    name: 'Laptop',
-    price: 100,
-    description: 'Laptop description',
-    isAvailable: true,
-    imgPath: "assets/Laptop.png"
-  }
+  products: Array<any> = [
+    {
+      id: 1,
+      name: 'Laptop',
+      price: 100,
+      description: 'Laptop description',
+      isAvailable: true,
+      imgPath: "assets/Laptop.png"
+    },
+    {
+      id: 2,
+      name: 'Mobile',
+      price: 100,
+      description: 'Mobile description',
+      isAvailable: true,
+      imgPath: "assets/Mobile.png"
+    }
+  ]
   currentTab: number = 1
 
   handleTabChange(event: any, tabIndex: number) {
