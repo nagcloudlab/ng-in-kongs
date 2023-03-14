@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -11,6 +12,28 @@ import { CartViewComponent } from './cart-view/cart-view.component';
 import { CardComponent } from './card/card.component';
 import { HighlightDirective } from './highlight.directive';
 import { DiscountPipe } from './discount.pipe';
+import { HomeComponent } from './home/home.component';
+import { NotForudComponent } from './not-forud/not-forud.component';
+
+
+const appRoutes: Routes = [
+  {
+    path: '',
+    component: HomeComponent
+  },
+  {
+    path: 'products',
+    component: ProductListComponent
+  },
+  {
+    path: "cart",
+    component: CartViewComponent
+  },
+  {
+    path: '**',
+    component: NotForudComponent
+  }
+]
 
 @NgModule({
   declarations: [
@@ -23,10 +46,12 @@ import { DiscountPipe } from './discount.pipe';
     CartViewComponent,
     CardComponent,
     HighlightDirective,
-    DiscountPipe
+    DiscountPipe,
+    HomeComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
