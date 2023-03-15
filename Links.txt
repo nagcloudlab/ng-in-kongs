@@ -1,0 +1,11 @@
+
+https://reactjs.org/docs/thinking-in-react.html
+
+Angular Notes:
+https://developing-furniture-976.notion.site/Kongsberg-c3a929c5a78e4d0dbbba8e8c51181c3e
+
+React:
+https://docs.google.com/presentation/d/1NmBXZC3gEfwSP0pfg3XDxzkElWyWXtsUPjeaX_RJZ0Q/edit?usp=sharing
+
+Microservices:
+https://docs.google.com/presentation/d/125-YxJodOQnGqUKlo6mhRwUxxWbzq7GfmLH5mvvAsWY/edit?usp=sharing
