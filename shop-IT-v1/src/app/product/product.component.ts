@@ -20,6 +20,7 @@ export class ProductComponent {
   constructor(private cartService: CartService) { }
 
   handleTabChange(event: any, tabIndex: number) {
+    event.preventDefault();
     console.log(event);
     this.currentTab = tabIndex
   }
